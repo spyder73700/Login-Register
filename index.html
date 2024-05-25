@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login_Register</title>
+</head>
+<body>
+    <header>
+        <h2>\  GET SET UP TO PLAY  \</h2>
+        <div>
+        <button type="button" onclick="popup('userpopup' , 'registerpopup')">I have a Riot account</button>
+        <button type="button" onclick="popup('registerpopup' , 'userpopup')">I don’t have a Riot account yet</button>
+        </div>
+    </header>
+      <div class="container">
+  <div class="pop-container" id="userpopup">
+    <div class="popup" >
+        <form>
+            <h2>
+            <span>SIGN IN</span>
+            <button type="reset" id="reset" >X</button>
+            </h2>
+            <span id="email-error"></span>
+            <input type="Email" id="email" spellcheck="false" placeholder="Email" onkeyup="validemail()" onblur="removeerror()">
+            
+          
+            <input type="password" placeholder="Password">
+           <div class="last">
+               <button type="submit" id="LOGIN-button">LOGIN</button>
+               <a href="#">Forget Password!</a>   
+           </div>
+           <br>
+           <button onclick="display('registerpopup' , 'userpopup')" id="dontaccount">I don’t have account</button>
+        </form>
+    </div>
+
+  </div>
+  </div>
+  <div class="container">
+  <div class="pop-container" id="registerpopup">
+    <div class="popup" >
+        <form>
+            <h2>
+            <span>MAKE ONE</span>
+            <button type="reset" id="reset">X</button>
+            </h2>
+            <input type="text" placeholder="Username">
+            <span id="email-error2"></span>
+            <input type="Email" id="email2" placeholder="Email" spellcheck="false" onkeyup="validemail2()" onblur="removeerror2()">
+            <input type="password" placeholder="Password" id="passwordcheck" onkeyup="strength()">
+            <span id="outbox"></span>
+            <input type="password" placeholder="Confirm Password">
+            <button type="submit" id="Register-button">REGISTER</button>
+        </form>
+    </div>
+  </div>
+  </div>
+  <script src="login.js">
+    
+  </script>
+</body>
+</html>
